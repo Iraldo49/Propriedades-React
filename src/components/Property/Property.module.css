@@ -1,21 +1,5 @@
-body{
-    font-family: 'Montserrat', sans-serif;
 
-}
-
-.painel-resultados{
-    display: grid;
-    grid-template-areas: 'cartao cartao cartao' ;
-    margin-left: 20px;
-    padding: 0;
-
-}
-
-.localizacao{
-    margin-left: 20px;
-
-}
-.cartao{
+.Card{
     width: 355px;
     height: 254px;
     margin: 100px;
@@ -28,26 +12,26 @@ body{
 
 
 }
-.pontuacao-cartao{
+.pontuacaoCard{
     color:gray;
 }
-.tipo-cartao{
+.typeCard{
     color: gray;
 }
-.titulo-cartao{
+.tituloCard{
     font-weight: bold;
 }
 .estrelinha{
     width: 15.5px;
     height: 15.5px;
 }
-.apartamento-imagem{
+.propertyCard{
     width: 355px;
     height: 254px;
     border-radius: 24px;
     background-color: bisque;
 }
-.estrelinha-pontuacao-titulo{
+.estrelaTitulo{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -55,12 +39,12 @@ body{
 
 
 }
-.estrelinha-pontuacao{
+.estrela{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.estrelinha-pontuacao svg {
+.estrela svg {
     color: red;
     font-size: 20px;
 

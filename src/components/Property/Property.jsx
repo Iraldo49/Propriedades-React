@@ -1,22 +1,22 @@
 import React from 'react'
 import { GrStar } from 'react-icons/gr';
-import './Style.css'
+import Styles from './Property.module.css'
 
-function Cartao({imagem,tipo,titulo,pontuacao}){
+function Property({imagem,tipo,titulo,pontuacao}){
     return(
-        <div className={'cartao'}>
-            <img src={imagem} alt={'imagem'} className={'apartamento-imagem'}/>
-            <div className={'estrelinha-pontuacao-titulo'}>
-                <small className={'tipo-cartao'}>{tipo}</small>
-                <div className={'estrelinha-pontuacao'}>
+        <div className={Styles.Card}>
+            <img src={imagem} alt={'imagem'} className={Styles.propertyCard}/>
+            <div className={Styles.estrelaTitulo}>
+                <small className={Styles.typeCard}>{tipo}</small>
+                <div className={Styles.estrela}>
                     <GrStar/>
-                    <p className={'pontuacao-cartao'}>{pontuacao}</p>
+                    <p className={Styles.pontuacaoCard}>{pontuacao}</p>
                 </div>
 
             </div>
-            <p className={'titulo-cartao'}>{titulo}</p>
+            <p className={Styles.tituloCard}>{titulo}</p>
         </div>
 
     )
 }
-export default Cartao;
+export default Property;

@@ -1,11 +1,11 @@
-.cabeçalho{
+.Navibar{
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 
 }
-.input-botao{
+.Pesquisa{
     position: absolute;
     width: 297px;
     height: 55px;
@@ -28,7 +28,7 @@
     
 
 }
-#botao{
+#btn{
 
     width: 80px;
     height: 55px;
@@ -37,7 +37,7 @@
 
 
 }
-#botao svg{
+#btn svg{
     color: red;
     font-size: 20px;
 }

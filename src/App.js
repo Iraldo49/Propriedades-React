@@ -1,27 +1,30 @@
 import React from 'react'
 import Cabeçalho from './components/BarraPesquisa/BarraPesquisa'
-import Cartao from './components/Property/Property'
+import Card from './components/Property/Property'
 import dados from './stays.js';
 import {useState} from 'react';
+import BarraPesquisa from './components/BarraPesquisa/BarraPesquisa';
+import Styles from './Style.module.css'
+
 function App(){
     const [localizacao, definirLocalizacao] = useState("");
 
-    const [cartoesAtuais, definirCartoes] = useState(
-        dados.map((cartao,index)=>{
-            return <Cartao key={index}  imagem={cartao.photo} titulo={cartao.title}
-                           tipo={cartao.type} pontuacao={cartao.rating}/>
+    const [cardAtuais, definirCard] = useState(
+        dados.map((card,index)=>{
+            return <Card key={index}  imagem={card.photo} titulo={card.title}
+                           tipo={card.type} pontuacao={card.rating}/>
 
         })
     )
 
     function buscar(input){
         definirLocalizacao(input);
-        definirCartoes(
-                dados.filter((cartao)=>{
-                return cartao.city.toLocaleLowerCase() === input.toLocaleLowerCase();
-            }).map((cartao,index)=>{
-                return <Cartao key={index}  imagem={cartao.photo} titulo={cartao.title}
-                               tipo={cartao.type} pontuacao={cartao.rating}/>
+        definirCard(
+                dados.filter((card)=>{
+                return card.city.toLocaleLowerCase() === input.toLocaleLowerCase();
+            }).map((card,index)=>{
+                return <Card key={index}  imagem={card.photo} titulo={card.title}
+                               tipo={card.type} pontuacao={card.rating}/>
 
             })
 
@@ -30,10 +33,10 @@ function App(){
     return(
 
         <>
-        <Cabeçalho buscarLocalizacao={buscar}/>
-            <h2 className={'localizacao'}>{localizacao}</h2>
-         <div className={'painel-resultados'}>
-             {cartoesAtuais}
+        <BarraPesquisa buscarLocalizacao={buscar}/>
+            <h2 className={Styles.localizacao}>{localizacao}</h2>
+         <div className={Styles.View}>
+             {cardAtuais}
 
          </div>
 

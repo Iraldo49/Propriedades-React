@@ -1,16 +1,18 @@
 import React from 'react'
 import logo from './logo.png'
 import { BiSearchAlt2 } from 'react-icons/bi';
-import './Style.css'
+import Styles from './Pesquisa.module.css'
 
 
-function Cabeçalho({buscarLocalizacao}){
+function BarraPesquisa({buscarLocalizacao}){
     return(
-        <div className={'cabeçalho'}>
-            <img src={logo} alt={'logo'} id={'logo'}/>
-           <div className={'input-botao'}>
-               <input placeholder={'localizações'} id={'input'}/>
-               <button id={'botao'} onClick={()=>buscarLocalizacao(document.getElementById('input').value)}><BiSearchAlt2 width='17.5px' height='17.5px'/></button>
+        <div className={Styles.Navibar}>
+            <img src={logo} alt={'logo'} id={Styles.logo}/>
+           <div className={Styles.Pesquisa}>
+               <input placeholder={'localizações'} id={Styles.input}/>
+               <button id={Styles.btn} 
+               onClick={()=>buscarLocalizacao(document.getElementById(Styles.input).value)}>
+                <BiSearchAlt2 width='17.5px' height='17.5px'/></button>
            </div>
         </div>
     )
@@ -20,4 +22,4 @@ function buscar(entrada){
     console.log(entrada);
 }
 
-export default Cabeçalho;
+export default BarraPesquisa;

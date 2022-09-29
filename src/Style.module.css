@@ -1,0 +1,17 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.View{
+    display: grid;
+    grid-template-areas: 'card card card' ;
+    margin-left: 20px;
+    padding: 0;
+
+}
+
+.localizacao{
+    margin-left: 20px;
+
+}
